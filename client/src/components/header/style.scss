@@ -1,0 +1,11 @@
+
+$color : white;
+$bgColor : #0D355A;
+$text-deco : none;
+nav{
+    background-color:$bgColor;
+    color: $color;
+}
+a{
+    text-decoration:$text-deco;
+}

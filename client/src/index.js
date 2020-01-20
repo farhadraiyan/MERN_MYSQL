@@ -16,7 +16,6 @@ const routing = (
     <BrowserRouter>
       <div>
         <Header />
-        <hr />
           <Route exact path="/" component={Home} />
           <Route exact path="/users" component={users} />
           <Route exact path="/register" component={register} />
