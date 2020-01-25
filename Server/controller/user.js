@@ -25,5 +25,7 @@ exports.findOne =  async (req,res)=>{
     }
 }
 
+
+
 //this is getting users in Promise way 
 
