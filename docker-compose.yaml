@@ -1,0 +1,18 @@
+version: "3.2"
+
+services: 
+    app: 
+        container_name: node_server
+        restart: always
+        build: 
+            context: ./backend
+            dockerfile: Dockerfile.dev
+        volumes: 
+            - ./backend/Server:/usr/src/app/server
+            - "/usr/src/app/server/node_modules"
+        #Since the express app is running on 3003, I have to map 3003 of container 
+        #to local whatever port i want, in this case my app will run on 30003 beacuse
+        # 3003 is the port number in bin/www app.
+        ports:
+            - '30003:3003'
+            - '30000:3000'
