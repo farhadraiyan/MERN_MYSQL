@@ -16,14 +16,14 @@ const scrapperRouter = require('./routes/scrapData')
 
 var app = express();
 
-// dbPool.query('SELECT * FROM `Admin_User`', function (error, results, fields) {
-//   // error will be an Error if one occurred during the query
-//   console.log("error:", error);
-//   // results will contain the results of the query
-//   console.log("Result:", results);
-//   // fields will contain information about the returned results fields (if any)
-//   console.log("Fields: ", fields);
-// });
+dbPool.query('SELECT * FROM `Admin_User`', function (error, results, fields) {
+  // error will be an Error if one occurred during the query
+  console.log("error:", error);
+  // results will contain the results of the query
+  console.log("Result:", results);
+  // fields will contain information about the returned results fields (if any)
+  console.log("Fields: ", fields);
+});
 
 
 // view engine setup
