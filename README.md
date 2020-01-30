@@ -18,7 +18,8 @@
 3. Then get into the running mysql contianer and run 'docker exec -it <contianer_name or id> bash'
 4. My sql file is mounted to the  docker-entrypoint-initdb.d directory insdie the container.
 5. login to mysql by 'mysql -u root -p' then enter password for root user.
-6. Once get in contianer with root access run sql script by 'source <sqlfile name>'
-7. That's it.
+6. create the database by 'create database <database name> and use <database name>
+7. Once get in contianer with root access run sql script by 'source <sqlfile name>'
+That's it.
 
 
