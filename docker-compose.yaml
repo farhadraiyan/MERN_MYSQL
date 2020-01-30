@@ -16,3 +16,17 @@ services:
         ports:
             - '30003:3003'
             - '30000:3000'
+        # depends_on: 
+        #     - express_mysql
+    express_mysql:
+        image: mysql:8.0
+        container_name: mysql8
+        restart: always
+        volumes: 
+            - ./mysq:/docker-entrypoint-initdb.d/
+        ports: 
+            - '30667:3306'
+        environment: 
+            MYSQL_HOST: 'localhost'
+            MYSQL_ROOT_PASSWORD: 'rootpass'
+

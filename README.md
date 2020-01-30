@@ -11,3 +11,14 @@
 
 ### client:
 5. navigate to client folder and run npm install, once done then npm start and react will be running on localhost:3000
+
+### Database connection and data backup:
+1. To connect use the previous procedure explained in  node.
+2. To migrate, first put the sql files inside the data folder 
+3. Then get into the running mysql contianer and run 'docker exec -it <contianer_name or id> bash'
+4. My sql file is mounted to the  docker-entrypoint-initdb.d directory insdie the container.
+5. login to mysql by 'mysql -u root -p' then enter password for root user.
+6. Once get in contianer with root access run sql script by 'source <sqlfile name>'
+7. That's it.
+
+
