@@ -23,10 +23,16 @@ services:
         container_name: mysql8
         restart: always
         volumes: 
-            - ./mysq:/docker-entrypoint-initdb.d/
+            - data_dir:/docker-entrypoint-initdb.d/
         ports: 
             - '30667:3306'
         environment: 
             MYSQL_HOST: 'localhost'
             MYSQL_ROOT_PASSWORD: 'rootpass'
+volumes:
+    data_dir:
+        driver_opts:
+            type: none
+            device: /Users/macbookpro/Desktop/My MacPro/learnProjects/nodejs/MERN_MYSQL/data #NOTE needs full path (~ doesn't work)
+            o: bind
 
